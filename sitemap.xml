@@ -12,4 +12,14 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://horizonlabsdev.github.io/reeftone-site/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://horizonlabsdev.github.io/reeftone-site/"/>
   </url>
+  <url>
+    <loc>https://horizonlabsdev.github.io/reeftone-site/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://horizonlabsdev.github.io/reeftone-site/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://horizonlabsdev.github.io/reeftone-site/de/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://horizonlabsdev.github.io/reeftone-site/de/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://horizonlabsdev.github.io/reeftone-site/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://horizonlabsdev.github.io/reeftone-site/de/impressum.html"/>
+  </url>
 </urlset>
