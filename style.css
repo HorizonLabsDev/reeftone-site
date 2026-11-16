@@ -183,3 +183,19 @@ h2 { font-size: clamp(1.5rem, 5vw, 2.1rem); line-height: 1.2; margin: 0 0 12px; 
   .depth-row { grid-template-columns: 240px 1fr; align-items: center; gap: 18px; }
   .depth-label { flex-direction: column; gap: 0; }
 }
+
+/* Comparison table */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.table-wrap { max-width: 860px; margin: 0 auto; overflow-x: auto; }
+.cmp { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.cmp th, .cmp td { padding: 11px 8px; border-bottom: 1px solid var(--line); text-align: center; }
+.cmp thead th { color: var(--muted); font-weight: 600; font-size: .82rem; }
+.cmp thead th.us { color: var(--accent); }
+.cmp tbody th { text-align: left; font-weight: 500; padding-left: 4px; }
+.cmp td.y { color: var(--text); font-weight: 700; font-size: 1.1rem; }
+.cmp tbody td:nth-child(2) { background: rgba(43,196,216,.09); }
+.cmp tbody td:nth-child(2).y { color: var(--accent); }
+.cmp td.n { color: var(--muted); opacity: .7; }
+.cmp td.s { color: var(--muted); font-size: .82rem; }
+.cmp .badge { margin-left: 4px; font-size: .62rem; padding: 0 6px; }
+@media (min-width: 720px) { .cmp { font-size: 1rem; } .cmp th, .cmp td { padding: 14px 12px; } }
