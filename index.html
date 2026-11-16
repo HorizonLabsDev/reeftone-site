@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reef Tone – Underwater Color Correction App for Divers</title>
 <meta name="description" content="Restore the colors of your dive footage with Reef Tone. Underwater video color correction for GoPro, DJI and underwater cameras, processed on your iPhone.">
+<meta name="apple-itunes-app" content="app-id=6819774243, affiliate-data=pt=128971192&amp;ct=ReefTone_Landingpage">
 <meta name="theme-color" content="#04141f">
 <link rel="canonical" href="https://horizonlabsdev.github.io/reeftone-site/">
 <link rel="alternate" hreflang="en" href="https://horizonlabsdev.github.io/reeftone-site/">
@@ -47,7 +48,13 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      }
+      },
+      "screenshot": [
+        "https://horizonlabsdev.github.io/reeftone-site/assets/app-en-1.webp",
+        "https://horizonlabsdev.github.io/reeftone-site/assets/app-en-2.webp",
+        "https://horizonlabsdev.github.io/reeftone-site/assets/app-en-3.webp",
+        "https://horizonlabsdev.github.io/reeftone-site/assets/app-en-4.webp"
+      ]
     },
     {
       "@type": "FAQPage",
@@ -92,6 +99,30 @@
             "@type": "Answer",
             "text": "The free version is limited in the number of videos you can export. Reef Tone Pro unlocks unlimited videos, precise dehazing and batch processing, as a subscription or a one-time purchase. Current prices are shown in the App Store."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my underwater footage look blue or green?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Water absorbs light color by color. Red disappears first (after about 5 m), then orange and yellow, so deeper footage shifts toward blue and green. Reef Tone compensates for the colors that were lost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I correct green water?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose Green when the water looked green. Reef Tone then adapts the correction to green water. You can fine-tune the intensity and check the result with the before/after comparison before you save."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I correct several videos at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Reef Tone Pro lets you process up to 10 videos at once with batch processing."
+          }
         }
       ]
     }
@@ -121,8 +152,8 @@
       <a class="store-badge" href="https://apps.apple.com/app/apple-store/id6819774243?pt=128971192&amp;ct=ReefTone_Landingpage&amp;mt=8"><img src="assets/app-store-badge-en.svg" width="162" height="54" alt="Download on the App Store"></a>
       <ul class="checks"><li>iPhone</li><li>No account, nothing uploaded</li><li>Free to try</li></ul>
       <div class="ba">
-        <img class="ba-after" src="assets/after-1280.jpg" srcset="assets/after-1280.jpg 1280w, assets/after-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" fetchpriority="high" alt="Reef with a school of barracuda, corrected with Reef Tone: clearer colors and contrast">
-        <img class="ba-before" src="assets/before-1280.jpg" srcset="assets/before-1280.jpg 1280w, assets/before-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" alt="Reef with a school of barracuda, original footage with a blue-gray cast and haze">
+        <img class="ba-after" src="assets/after-1280.webp" srcset="assets/after-1280.webp 1280w, assets/after-1920.webp 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" fetchpriority="high" alt="Reef with a school of barracuda, corrected with Reef Tone: clearer colors and contrast">
+        <img class="ba-before" src="assets/before-1280.webp" srcset="assets/before-1280.webp 1280w, assets/before-1920.webp 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" alt="Reef with a school of barracuda, original footage with a blue-gray cast and haze">
         <span class="tag l">Before</span><span class="tag r">After</span>
         <input type="range" min="0" max="100" value="50" aria-label="Before and after comparison">
       </div>
@@ -216,6 +247,9 @@
         <details><summary>Does Reef Tone upload my videos?</summary><p>No. Photos and videos are processed on your device. There is no upload and no account.</p></details>
         <details><summary>Can I correct photos as well as videos?</summary><p>Yes. You can import photos and videos, and the result is saved to your photo library or Files only when you choose to save it.</p></details>
         <details><summary>Is Reef Tone free?</summary><p>The free version is limited in the number of videos you can export. Reef Tone Pro unlocks unlimited videos, precise dehazing and batch processing, as a subscription or a one-time purchase. Current prices are shown in the App Store.</p></details>
+        <details><summary>Why does my underwater footage look blue or green?</summary><p>Water absorbs light color by color. Red disappears first (after about 5 m), then orange and yellow, so deeper footage shifts toward blue and green. Reef Tone compensates for the colors that were lost.</p></details>
+        <details><summary>How do I correct green water?</summary><p>Choose Green when the water looked green. Reef Tone then adapts the correction to green water. You can fine-tune the intensity and check the result with the before/after comparison before you save.</p></details>
+        <details><summary>Can I correct several videos at once?</summary><p>Yes. Reef Tone Pro lets you process up to 10 videos at once with batch processing.</p></details>
       </div>
     </div>
   </section>
@@ -241,8 +275,8 @@ document.querySelectorAll('.thumb').forEach(function (btn) {
   btn.addEventListener('click', function () {
     var ba = document.querySelector('.ba'), a = ba.querySelector('.ba-after'), b = ba.querySelector('.ba-before');
     var d = btn.dataset;
-    a.src = d.after + '-1280.jpg'; a.srcset = d.after + '-1280.jpg 1280w, ' + d.after + '-1920.jpg 1920w'; a.alt = d.altAfter;
-    b.src = d.before + '-1280.jpg'; b.srcset = d.before + '-1280.jpg 1280w, ' + d.before + '-1920.jpg 1920w'; b.alt = d.altBefore;
+    a.src = d.after + '-1280.webp'; a.srcset = d.after + '-1280.webp 1280w, ' + d.after + '-1920.webp 1920w'; a.alt = d.altAfter;
+    b.src = d.before + '-1280.webp'; b.srcset = d.before + '-1280.webp 1280w, ' + d.before + '-1920.webp 1920w'; b.alt = d.altBefore;
     document.querySelectorAll('.thumb').forEach(function (t) { t.setAttribute('aria-pressed', t === btn ? 'true' : 'false'); });
   });
 });
