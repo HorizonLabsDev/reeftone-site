@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://horizonlabsdev.github.io/reeftone-site/</loc>
+    <loc>https://reeftone.app/</loc>
     <lastmod>2026-11-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://horizonlabsdev.github.io/reeftone-site/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://horizonlabsdev.github.io/reeftone-site/de/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://horizonlabsdev.github.io/reeftone-site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reeftone.app/"/>
   </url>
   <url>
-    <loc>https://horizonlabsdev.github.io/reeftone-site/de/</loc>
+    <loc>https://reeftone.app/de/</loc>
     <lastmod>2026-11-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://horizonlabsdev.github.io/reeftone-site/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://horizonlabsdev.github.io/reeftone-site/de/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://horizonlabsdev.github.io/reeftone-site/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reeftone.app/"/>
   </url>
   <url>
-    <loc>https://horizonlabsdev.github.io/reeftone-site/impressum.html</loc>
+    <loc>https://reeftone.app/impressum.html</loc>
     <lastmod>2026-11-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://horizonlabsdev.github.io/reeftone-site/impressum.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://horizonlabsdev.github.io/reeftone-site/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/impressum.html"/>
   </url>
   <url>
-    <loc>https://horizonlabsdev.github.io/reeftone-site/de/impressum.html</loc>
+    <loc>https://reeftone.app/de/impressum.html</loc>
     <lastmod>2026-11-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://horizonlabsdev.github.io/reeftone-site/impressum.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://horizonlabsdev.github.io/reeftone-site/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/impressum.html"/>
   </url>
 </urlset>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://horizonlabsdev.github.io/reeftone-site/sitemap.xml
+Sitemap: https://reeftone.app/sitemap.xml
