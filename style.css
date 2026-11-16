@@ -167,3 +167,19 @@ h2 { font-size: clamp(1.5rem, 5vw, 2.1rem); line-height: 1.2; margin: 0 0 12px; 
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); overflow: visible; }
   .step { max-width: none; }
 }
+
+/* Physics: how far each color travels in water */
+.depth { list-style: none; margin: 0 auto; padding: 0; max-width: 760px; display: grid; gap: 14px; }
+.depth-row { display: grid; grid-template-columns: 1fr; gap: 6px; }
+.depth-label { display: flex; justify-content: space-between; gap: 12px; font-size: .95rem; }
+.depth-label span { color: var(--muted); }
+.depth-track { display: block; height: 18px; border-radius: 999px; background: rgba(255,255,255,.06); overflow: hidden; }
+.depth-bar { display: block; height: 100%; border-radius: 999px; }
+.depth-bar.red { background: linear-gradient(90deg, #e5483d 55%, rgba(229,72,61,.15)); }
+.depth-bar.orange { background: linear-gradient(90deg, #f08a24 55%, rgba(240,138,36,.15)); }
+.depth-bar.yellow { background: linear-gradient(90deg, #f2d03b 55%, rgba(242,208,59,.15)); }
+.depth-bar.blue { background: linear-gradient(90deg, #3fbf8f, #2bc4d8 45%, #2a7fd6); }
+@media (min-width: 720px) {
+  .depth-row { grid-template-columns: 240px 1fr; align-items: center; gap: 18px; }
+  .depth-label { flex-direction: column; gap: 0; }
+}
