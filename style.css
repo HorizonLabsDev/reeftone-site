@@ -150,7 +150,16 @@ h2 { font-size: clamp(1.5rem, 5vw, 2.1rem); line-height: 1.2; margin: 0 0 12px; 
 /* How it works: app screenshots */
 .steps { list-style: none; margin: 32px 0 0; padding: 0; display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
 .step { flex: 0 0 68%; max-width: 280px; scroll-snap-align: center; }
-.step img { width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--line); background: #000; margin-bottom: 14px; }
+/* Generic CSS iPhone frame (no Apple artwork): bezel, Dynamic Island, side buttons, home bar */
+.phone { position: relative; margin: 0 8px 18px; padding: 3.2%; background: linear-gradient(145deg, #3a3d42, #16181b 40%, #2a2d31); border-radius: 15% / 6.9%; box-shadow: 0 0 0 1px #4a4e54 inset, 0 14px 34px rgba(0,0,0,.55); }
+.phone img { display: block; width: 100%; height: auto; aspect-ratio: 520 / 1127; border-radius: 11.6% / 5.3%; background: #000; }
+.phone::before { content: ""; position: absolute; z-index: 1; top: 5.4%; left: 50%; width: 29%; height: 2.5%; transform: translateX(-50%); background: #000; border-radius: 999px; }
+.phone::after { content: ""; position: absolute; z-index: 1; bottom: 4.6%; left: 50%; width: 34%; height: .5%; min-height: 3px; transform: translateX(-50%); background: rgba(255,255,255,.55); border-radius: 999px; }
+.phone i { position: absolute; width: 1.2%; background: #2a2d31; border-radius: 2px; }
+.phone i.b1 { left: -1%; top: 17%; height: 4%; }
+.phone i.b2 { left: -1%; top: 24%; height: 7%; }
+.phone i.b3 { left: -1%; top: 33%; height: 7%; }
+.phone i.pw { right: -1%; top: 27%; height: 11%; }
 .step h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .step .num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin-right: 8px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: .8rem; }
 .step p { margin: 0; color: var(--muted); font-size: .95rem; }
