@@ -142,9 +142,9 @@ h2 { font-size: clamp(1.5rem, 5vw, 2.1rem); line-height: 1.2; margin: 0 0 12px; 
 
 /* Example picker under the before/after slider */
 .thumbs { display: flex; justify-content: center; gap: 10px; max-width: 860px; margin: 14px auto 0; }
-.thumb { flex: 1 1 0; max-width: 200px; padding: 0; background: var(--card); color: var(--muted); border: 2px solid var(--line); border-radius: 12px; overflow: hidden; cursor: pointer; font: 600 .78rem/1.3 var(--font); text-align: center; }
+.thumb { display: flex; flex-direction: column; justify-content: flex-start; flex: 1 1 0; max-width: 200px; padding: 0; background: var(--card); color: var(--muted); border: 2px solid var(--line); border-radius: 12px; overflow: hidden; cursor: pointer; font: 600 .78rem/1.3 var(--font); text-align: center; }
 .thumb img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
-.thumb span { display: block; padding: 6px 4px 8px; }
+.thumb span { display: block; flex: 1; padding: 6px 4px 8px; }
 .thumb[aria-pressed="true"] { border-color: var(--accent); color: var(--text); }
 
 /* How it works: app screenshots */
