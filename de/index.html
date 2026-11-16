@@ -114,26 +114,19 @@
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
-      <img class="icon" src="../assets/app-icon.jpg" width="96" height="96" alt="Reef-Tone-App-Symbol">
       <h1 id="hero-title">Die Unterwasser-Farbkorrektur-App für Taucher</h1>
       <p class="subline">Bring die Farben deiner Tauchvideos zurück. Für GoPro, DJI und Unterwasserkameras.</p>
-      <!-- TODO: href durch die echte App-Store-URL ersetzen und offizielles Apple-Badge einsetzen -->
       <a class="store-badge" href="https://apps.apple.com/de/app/apple-store/id6819774243?pt=128971192&amp;ct=ReefTone_Landingpage&amp;mt=8"><img src="../assets/app-store-badge-de.svg" width="162" height="54" alt="Laden im App Store"></a>
-      <p class="note">Für iPhone. Deine Aufnahmen bleiben auf deinem Gerät.</p>
-    </div>
-  </section>
-
-  <section id="compare" aria-labelledby="compare-title">
-    <div class="wrap">
-      <h2 id="compare-title">Der Unterschied</h2>
-      <p class="lead">Ziehe den Regler, um Original und korrigiertes Video zu vergleichen.</p>
+      <ul class="checks"><li>Für iPhone</li><li>Kein Konto, kein Upload</li><li>Kostenlos testen</li></ul>
       <div class="ba">
-        <img class="ba-after" src="../assets/after-1280.jpg" srcset="../assets/after-1280.jpg 1280w, ../assets/after-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" loading="lazy" alt="Riff mit einem Barrakuda-Schwarm, mit Reef Tone korrigiert: klarere Farben und mehr Kontrast">
-        <img class="ba-before" src="../assets/before-1280.jpg" srcset="../assets/before-1280.jpg 1280w, ../assets/before-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" loading="lazy" alt="Riff mit einem Barrakuda-Schwarm, Originalaufnahme mit Blaugrau-Stich und Dunst">
+        <img class="ba-after" src="../assets/after-1280.jpg" srcset="../assets/after-1280.jpg 1280w, ../assets/after-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" fetchpriority="high" alt="Riff mit einem Barrakuda-Schwarm, mit Reef Tone korrigiert: klarere Farben und mehr Kontrast">
+        <img class="ba-before" src="../assets/before-1280.jpg" srcset="../assets/before-1280.jpg 1280w, ../assets/before-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" alt="Riff mit einem Barrakuda-Schwarm, Originalaufnahme mit Blaugrau-Stich und Dunst">
         <span class="tag l">Vorher</span><span class="tag r">Nachher</span>
         <input type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Vergleich">
       </div>
-      <p class="caption">Dasselbe Bild aus einem Tauchgang, Original und mit Reef Tone korrigiert.</p>
+
+      <div class="thumbs" role="group" aria-label="Beispiel wählen"><button type="button" class="thumb" data-before="../assets/before" data-after="../assets/after" data-alt-before="Riff mit einem Barrakuda-Schwarm, Originalaufnahme mit Blaugrau-Stich und Dunst" data-alt-after="Riff mit einem Barrakuda-Schwarm, mit Reef Tone korrigiert: klarere Farben und mehr Kontrast" aria-pressed="true"><img src="../assets/thumb-barracuda.jpg" width="160" height="90" alt=""><span>Barrakuda-Schwarm</span></button><button type="button" class="thumb" data-before="../assets/ex-clown-before" data-after="../assets/ex-clown-after" data-alt-before="Anemonenfisch an einer Anemone, Originalaufnahme mit Blaugrün-Stich" data-alt-after="Anemonenfisch an einer Anemone, mit Reef Tone korrigiert: natürliche Farben zurück" aria-pressed="false"><img src="../assets/thumb-clown.jpg" width="160" height="90" alt=""><span>Anemonenfisch</span></button><button type="button" class="thumb" data-before="../assets/ex-juv-before" data-after="../assets/ex-juv-after" data-alt-before="Jungfisch über Hartkorallen, Originalaufnahme mit Blaustich" data-alt-after="Jungfisch über Hartkorallen, mit Reef Tone korrigiert: warme Farben zurück" aria-pressed="false"><img src="../assets/thumb-juv.jpg" width="160" height="90" alt=""><span>Jungfisch in Hartkorallen</span></button></div>
+      <p class="caption">Ziehe den Regler, um Original und korrigiertes Video zu vergleichen.</p>
     </div>
   </section>
 
@@ -190,6 +183,15 @@
 document.querySelectorAll('.ba').forEach(function (el) {
   var r = el.querySelector('input');
   r.addEventListener('input', function () { el.style.setProperty('--pos', r.value + '%'); });
+});
+document.querySelectorAll('.thumb').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var ba = document.querySelector('.ba'), a = ba.querySelector('.ba-after'), b = ba.querySelector('.ba-before');
+    var d = btn.dataset;
+    a.src = d.after + '-1280.jpg'; a.srcset = d.after + '-1280.jpg 1280w, ' + d.after + '-1920.jpg 1920w'; a.alt = d.altAfter;
+    b.src = d.before + '-1280.jpg'; b.srcset = d.before + '-1280.jpg 1280w, ' + d.before + '-1920.jpg 1920w'; b.alt = d.altBefore;
+    document.querySelectorAll('.thumb').forEach(function (t) { t.setAttribute('aria-pressed', t === btn ? 'true' : 'false'); });
+  });
 });
 </script>
 </body>

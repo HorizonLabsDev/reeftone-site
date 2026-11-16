@@ -114,25 +114,19 @@
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
-      <img class="icon" src="assets/app-icon.jpg" width="96" height="96" alt="Reef Tone app icon">
       <h1 id="hero-title">The underwater color correction app for divers</h1>
       <p class="subline">Restore the colors of your dive footage. Made for GoPro, DJI and underwater cameras.</p>
       <a class="store-badge" href="https://apps.apple.com/app/apple-store/id6819774243?pt=128971192&amp;ct=ReefTone_Landingpage&amp;mt=8"><img src="assets/app-store-badge-en.svg" width="162" height="54" alt="Download on the App Store"></a>
-      <p class="note">For iPhone. Your footage stays on your device.</p>
-    </div>
-  </section>
-
-  <section id="compare" aria-labelledby="compare-title">
-    <div class="wrap">
-      <h2 id="compare-title">See the difference</h2>
-      <p class="lead">Drag the slider to compare original and corrected footage.</p>
+      <ul class="checks"><li>iPhone</li><li>No account, nothing uploaded</li><li>Free to try</li></ul>
       <div class="ba">
-        <img class="ba-after" src="assets/after-1280.jpg" srcset="assets/after-1280.jpg 1280w, assets/after-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" loading="lazy" alt="Reef with a school of barracuda, corrected with Reef Tone: clearer colors and contrast">
-        <img class="ba-before" src="assets/before-1280.jpg" srcset="assets/before-1280.jpg 1280w, assets/before-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" loading="lazy" alt="Reef with a school of barracuda, original footage with a blue-gray cast and haze">
+        <img class="ba-after" src="assets/after-1280.jpg" srcset="assets/after-1280.jpg 1280w, assets/after-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" fetchpriority="high" alt="Reef with a school of barracuda, corrected with Reef Tone: clearer colors and contrast">
+        <img class="ba-before" src="assets/before-1280.jpg" srcset="assets/before-1280.jpg 1280w, assets/before-1920.jpg 1920w" sizes="(min-width: 900px) 860px, calc(100vw - 40px)" width="1920" height="1080" alt="Reef with a school of barracuda, original footage with a blue-gray cast and haze">
         <span class="tag l">Before</span><span class="tag r">After</span>
         <input type="range" min="0" max="100" value="50" aria-label="Before and after comparison">
       </div>
-      <p class="caption">Same frame from a dive, original and corrected with Reef Tone.</p>
+
+      <div class="thumbs" role="group" aria-label="Choose an example"><button type="button" class="thumb" data-before="assets/before" data-after="assets/after" data-alt-before="Reef with a school of barracuda, original footage with a blue-gray cast and haze" data-alt-after="Reef with a school of barracuda, corrected with Reef Tone: clearer colors and contrast" aria-pressed="true"><img src="assets/thumb-barracuda.jpg" width="160" height="90" alt=""><span>Barracuda school</span></button><button type="button" class="thumb" data-before="assets/ex-clown-before" data-after="assets/ex-clown-after" data-alt-before="Clownfish at an anemone, original footage with a blue-green cast" data-alt-after="Clownfish at an anemone, corrected with Reef Tone: natural colors restored" aria-pressed="false"><img src="assets/thumb-clown.jpg" width="160" height="90" alt=""><span>Clownfish</span></button><button type="button" class="thumb" data-before="assets/ex-juv-before" data-after="assets/ex-juv-after" data-alt-before="Juvenile fish above hard coral, original footage with a blue cast" data-alt-after="Juvenile fish above hard coral, corrected with Reef Tone: warm colors restored" aria-pressed="false"><img src="assets/thumb-juv.jpg" width="160" height="90" alt=""><span>Juvenile fish in hard coral</span></button></div>
+      <p class="caption">Drag the slider to compare original and corrected footage.</p>
     </div>
   </section>
 
@@ -189,6 +183,15 @@
 document.querySelectorAll('.ba').forEach(function (el) {
   var r = el.querySelector('input');
   r.addEventListener('input', function () { el.style.setProperty('--pos', r.value + '%'); });
+});
+document.querySelectorAll('.thumb').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var ba = document.querySelector('.ba'), a = ba.querySelector('.ba-after'), b = ba.querySelector('.ba-before');
+    var d = btn.dataset;
+    a.src = d.after + '-1280.jpg'; a.srcset = d.after + '-1280.jpg 1280w, ' + d.after + '-1920.jpg 1920w'; a.alt = d.altAfter;
+    b.src = d.before + '-1280.jpg'; b.srcset = d.before + '-1280.jpg 1280w, ' + d.before + '-1920.jpg 1920w'; b.alt = d.altBefore;
+    document.querySelectorAll('.thumb').forEach(function (t) { t.setAttribute('aria-pressed', t === btn ? 'true' : 'false'); });
+  });
 });
 </script>
 </body>
