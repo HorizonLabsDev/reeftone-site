@@ -38,4 +38,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/guide.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/unterwasser-farbkorrektur.html"/>
   </url>
+  <url>
+    <loc>https://reeftone.app/green-water.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/green-water.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/gruenes-wasser.html"/>
+  </url>
+  <url>
+    <loc>https://reeftone.app/dji-osmo-action.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/dji-osmo-action.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/dji-osmo-action.html"/>
+  </url>
 </urlset>
