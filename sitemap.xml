@@ -26,4 +26,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/impressum.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/impressum.html"/>
   </url>
+  <url>
+    <loc>https://reeftone.app/guide.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/unterwasser-farbkorrektur.html"/>
+  </url>
+  <url>
+    <loc>https://reeftone.app/de/unterwasser-farbkorrektur.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/unterwasser-farbkorrektur.html"/>
+  </url>
 </urlset>
