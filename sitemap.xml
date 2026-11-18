@@ -56,4 +56,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/gopro.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/gopro-unterwasser.html"/>
   </url>
+  <url>
+    <loc>https://reeftone.app/support.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reeftone.app/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://reeftone.app/de/support.html"/>
+  </url>
 </urlset>
